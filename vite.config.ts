@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import plainText from 'vite-plugin-plain-text';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+    plugins: [
+        react(),
+        plainText(['**/*.text', /\.glsl$/], {
+            namedExport: false,
+            dtsAutoGen: true,
+            distAutoClean: true,
+        }),
+    ],
+});
