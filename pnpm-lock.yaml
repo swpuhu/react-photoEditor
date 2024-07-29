@@ -10,6 +10,7 @@ specifiers:
   eslint: ^8.57.0
   eslint-plugin-react-hooks: ^4.6.2
   eslint-plugin-react-refresh: ^0.4.7
+  gl-matrix: ^3.4.3
   react: ^18.3.1
   react-dom: ^18.3.1
   typescript: ^5.2.2
@@ -18,6 +19,7 @@ specifiers:
 
 dependencies:
   antd: 5.19.0_nnrd3gsncyragczmpvfhocinkq
+  gl-matrix: 3.4.3
   react: 18.3.1
   react-dom: 18.3.1_react@18.3.1
   vite-plugin-plain-text: 1.4.2
@@ -1742,6 +1744,10 @@ packages:
     resolution: {integrity: sha1-MqbudsPX9S1GsrGuXZP+qFgKJeA=}
     engines: {node: '>=6.9.0'}
     dev: true
+
+  /gl-matrix/3.4.3:
+    resolution: {integrity: sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==}
+    dev: false
 
   /glob-parent/5.1.2:
     resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=}
