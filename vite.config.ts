@@ -6,7 +6,7 @@ import plainText from 'vite-plugin-plain-text';
 export default defineConfig({
     plugins: [
         react(),
-        plainText(['**/*.text', /\.glsl$/], {
+        plainText(['**/*.text', /\.glsl$/, /\.chunk$/], {
             namedExport: false,
             dtsAutoGen: true,
             distAutoClean: true,

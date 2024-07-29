@@ -1,14 +1,25 @@
 import './App.css';
 import { useEffect, useRef } from 'react';
-import { Scene } from './renderer/Scene';
+import { Renderer } from './renderer/Renderer';
 function App() {
-    const canvasRef = useRef(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
     useEffect(() => {
-        if (canvasRef.current) {
-            const s = new Scene(canvasRef.current);
-            console.log(s);
+        const canvas = canvasRef.current;
+        let renderer: Renderer;
+        if (canvas) {
+            const gl = canvas.getContext('webgl');
+            if (gl) {
+                renderer = new Renderer(gl);
+                console.log(renderer);
+            }
         }
-    });
+        return () => {
+            if (renderer) {
+                console.log('destroy renderer!');
+                renderer.destroy();
+            }
+        };
+    }, []);
     return (
         <>
             <canvas
